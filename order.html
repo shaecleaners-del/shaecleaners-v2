@@ -25,9 +25,7 @@
 </div>
 
 </header>
-
 <section class="order-page">
-
 <h2>Form Pemesanan</h2>
 
 <input type="text" id="nama" placeholder="Nama Pelanggan">
@@ -35,33 +33,42 @@
 <input type="tel" id="hp" placeholder="Nomor WhatsApp">
 
 <textarea id="alamat" placeholder="Alamat Lengkap"></textarea>
-
 <select id="layanan">
-
 <option value="">Pilih Layanan</option>
-
 <option value="Sofa 1 Seater|60000">Cuci Sofa 1 Seater</option>
-
 <option value="Sofa L Standard|250000">Cuci Sofa L Standard</option>
-
 <option value="Springbed Single|180000">Cuci Kasur Single</option>
-
 <option value="Springbed Queen|270000">Cuci Kasur Queen</option>
-
 <option value="Karpet /m²|13000">Cuci Karpet</option>
-
 <option value="Home Cleaning|100000">Home Cleaning</option>
-
 <option value="Cuci AC|75000">Cuci AC</option>
-
 <option value="Jok Mobil|400000">Jok Mobil + Interior</option>
-
 <option value="Gorden|35000">Cuci Gorden</option>
-
 <option value="Kursi|35000">Cuci Kursi</option>
+<script>
+const selected =
+localStorage.getItem("selectedService");
 
+
+if(selected){
+
+    const option =
+    [...layanan.options]
+    .find(
+        o => o.text.includes(selected)
+    );
+
+
+    if(option){
+
+        layanan.value = option.value;
+
+        hitungTotal();
+
+    }
+
+}</script>
 </select>
-
 <input type="number"
 
 id="qty"
@@ -88,15 +95,10 @@ min="1">
 <b id="invoice">INV-0000</b></p>
 
 </div>
-
 <button id="btnWA">
-
 Pesan via WhatsApp
-
 </button>
-
 </section>
-
 <script src="assets/js/order.js"></script>
 
 </body>
