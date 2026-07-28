@@ -241,3 +241,14 @@ status:"Menunggu"
 }
 
 );
+const promo =
+localStorage.getItem("promoAktif");
+
+
+if(promo){
+
+// ambil diskon dari Firebase
+
+// kurangi total pembayaran
+
+}
