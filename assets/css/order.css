@@ -1,0 +1,169 @@
+/* ==========================================
+   Shae Cleaners v2
+   order.css
+========================================== */
+
+.order-page{
+    max-width:700px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.order-page h2{
+    text-align:center;
+    color:#1185ff;
+    margin-bottom:25px;
+    font-size:28px;
+    font-weight:700;
+}
+
+.order-page input,
+.order-page select,
+.order-page textarea{
+    width:100%;
+    padding:15px 18px;
+    margin-bottom:18px;
+    border:1px solid #dbe5f1;
+    border-radius:14px;
+    font-size:15px;
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    transition:.3s;
+    outline:none;
+}
+
+.order-page textarea{
+    resize:vertical;
+    min-height:100px;
+}
+
+.order-page input:focus,
+.order-page select:focus,
+.order-page textarea:focus{
+    border-color:#1185ff;
+    box-shadow:0 0 0 4px rgba(17,133,255,.12);
+}
+
+.summary{
+    margin-top:25px;
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.summary p{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:14px 0;
+    font-size:15px;
+}
+
+.summary b{
+    color:#1185ff;
+    font-size:17px;
+}
+
+#invoice{
+    color:#ff6b00;
+}
+
+#btnWA{
+    width:100%;
+    margin-top:25px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#25D366,#1EBE5D);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(37,211,102,.25);
+}
+
+#btnWA:hover{
+    transform:translateY(-3px);
+}
+
+#btnWA:active{
+    transform:scale(.98);
+}
+
+/* Tombol Invoice */
+
+#btnInvoice{
+    width:100%;
+    margin-top:15px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#1185ff,#42b7ff);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(17,133,255,.25);
+}
+
+#btnInvoice:hover{
+    transform:translateY(-3px);
+}
+
+/* Badge Promo */
+
+.badge-promo{
+    display:inline-block;
+    background:#ff4d4f;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* Estimasi */
+
+.estimasi{
+    margin-top:20px;
+    background:#eef7ff;
+    border-left:5px solid #1185ff;
+    padding:15px;
+    border-radius:12px;
+    font-size:14px;
+    color:#444;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.order-page{
+    padding:16px;
+}
+
+.order-page h2{
+    font-size:24px;
+}
+
+.summary{
+    padding:18px;
+}
+
+.summary p{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+}
+
+#btnWA,
+#btnInvoice{
+    font-size:15px;
+    padding:15px;
+}
+
+}
