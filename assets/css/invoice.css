@@ -1,0 +1,263 @@
+/* ==========================================
+   Shae Cleaners v2
+   invoice.css
+========================================== */
+
+body{
+    margin:0;
+    padding:20px;
+    background:#f4f7fb;
+    font-family:'Poppins',sans-serif;
+}
+
+.invoice{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.invoice-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+}
+
+.invoice-header .logo{
+
+    width:75px;
+
+    height:75px;
+
+    object-fit:contain;
+
+}
+
+.invoice-header h2{
+
+    margin:0;
+
+    color:#1185ff;
+
+}
+
+.invoice-header p{
+
+    margin-top:5px;
+
+    color:#666;
+
+}
+
+.invoice-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:20px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.customer{
+
+    background:#f8fbff;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+}
+
+.customer h3{
+
+    margin-top:0;
+
+    color:#1185ff;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+table th{
+
+    background:#1185ff;
+
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+table td{
+
+    padding:14px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.grand-total{
+
+    margin-top:25px;
+
+    text-align:right;
+
+}
+
+.grand-total h2{
+
+    color:#1185ff;
+
+    margin-top:8px;
+
+    font-size:30px;
+
+}
+
+.invoice button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#1185ff;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.invoice button:hover{
+
+    background:#0c70db;
+
+}
+
+/* Status */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.status-menunggu{
+
+    background:#ff9800;
+
+}
+
+.status-proses{
+
+    background:#2196f3;
+
+}
+
+.status-selesai{
+
+    background:#4caf50;
+
+}
+
+/* Footer Invoice */
+
+.footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:13px;
+
+    border-top:1px dashed #ddd;
+
+    padding-top:20px;
+
+}
+
+/* Print */
+
+@media print{
+
+body{
+
+background:white;
+
+padding:0;
+
+}
+
+.invoice{
+
+box-shadow:none;
+
+padding:10px;
+
+border-radius:0;
+
+max-width:100%;
+
+}
+
+button{
+
+display:none;
+
+}
+
+}
