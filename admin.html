@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Shae Cleaners</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<header class="topbar">
+<div class="logo">
+<img src="assets/img/logo.png">
+<span>Admin Shae Cleaners</span>
+</div>
+</header>
+<section class="dashboard">
+<div class="card">
+<h3>Total Pesanan</h3>
+<h1 id="totalOrder">0</h1>
+</div>
+<div class="card">
+<h3>Pesanan Hari Ini</h3>
+<h1 id="todayOrder">0</h1>
+</div>
+<div class="card">
+<h3>Total Pendapatan</h3>
+<h1 id="income">Rp0</h1>
+</div>
+</section>
+<section class="table-area">
+<h2>Daftar Pesanan</h2>
+<table>
+<thead>
+<tr>
+<th>Invoice</th>
+<th>Nama</th>
+<th>Layanan</th>
+<th>Total</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody id="orderTable">
+</tbody>
+</table>
+</section>
+<section class="dashboard">
+<div class="card">
+<h3>Total Pelanggan</h3>
+<h1 id="customerCount">0</h1>
+</div>
+<div class="card">
+<h3>Order Selesai</h3>
+<h1 id="doneOrder">0</h1>
+</div>
+<div class="card">
+<h3>Order Diproses</h3>
+<h1 id="processOrder">0</h1>
+</div>
+</section>
+<button id="logout">
+Logout
+</button>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

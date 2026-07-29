@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Invoice | Shae Cleaners</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/invoice.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="invoice">
+
+    <div class="invoice-header">
+
+        <img src="assets/img/logo.png" class="logo">
+
+        <div>
+
+            <h2>SHAE CLEANERS</h2>
+
+            <p>Cleaning Service Profesional</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="invoice-info">
+
+        <p><b>No Invoice</b> :
+        <span id="inv"></span></p>
+
+        <p><b>Tanggal</b> :
+        <span id="tgl"></span></p>
+
+    </div>
+
+    <div class="customer">
+
+        <h3>Data Pelanggan</h3>
+
+        <p id="nama"></p>
+
+        <p id="hp"></p>
+
+        <p id="alamat"></p>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Layanan</th>
+
+            <th>Qty</th>
+
+            <th>Harga</th>
+
+            <th>Total</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+
+    <div class="grand-total">
+
+        Total Bayar
+
+        <h2 id="grandTotal"></h2>
+
+    </div>
+
+    <button onclick="window.print()">
+
+        Cetak Invoice
+
+    </button>
+
+</div>
+<script src="assets/js/invoice.js"></script>
+</body>
+</html>

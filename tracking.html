@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tracking Pesanan | Shae Cleaners</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/tracking.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+
+<img src="assets/img/logo.png">
+
+<span>Tracking Pesanan</span>
+
+</div>
+
+</header>
+
+<section class="tracking-page">
+
+<h2>Cek Status Pesanan</h2>
+
+<p>Masukkan nomor invoice Anda.</p>
+
+<input
+type="text"
+id="invoiceInput"
+placeholder="INV-20260728-001">
+
+<button id="btnCari">
+
+Cari Pesanan
+
+</button>
+
+<div id="hasil" class="tracking-card" style="display:none;">
+
+<h3 id="status"></h3>
+
+<p><b>Invoice :</b> <span id="inv"></span></p>
+
+<p><b>Nama :</b> <span id="nama"></span></p>
+
+<p><b>Layanan :</b> <span id="layanan"></span></p>
+
+<p><b>Total :</b> <span id="total"></span></p>
+
+<p><b>Tanggal :</b> <span id="tanggal"></span></p>
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<script type="module" src="assets/js/tracking.js"></script>
+
+</body>
+</html>
