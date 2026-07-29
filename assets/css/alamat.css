@@ -1,0 +1,125 @@
+.address-page{
+
+padding:20px;
+
+}
+
+
+.address-page h2{
+
+color:#1185ff;
+
+}
+
+
+
+.add-box{
+
+background:white;
+
+padding:20px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:20px;
+
+}
+
+
+
+.add-box input,
+.add-box textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-family:Poppins,sans-serif;
+
+}
+
+
+
+.add-box textarea{
+
+height:100px;
+
+}
+
+
+
+.add-box button{
+
+width:100%;
+
+padding:15px;
+
+background:#1185ff;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+}
+
+
+
+.address-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.address-card h3{
+
+color:#1185ff;
+
+}
+
+
+
+.address-card button{
+
+padding:10px;
+
+border:none;
+
+border-radius:10px;
+
+margin-right:5px;
+
+background:#1185ff;
+
+color:white;
+
+}
+
+
+
+.address-card .delete{
+
+background:#ff4d4f;
+
+}

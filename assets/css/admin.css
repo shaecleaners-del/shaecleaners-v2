@@ -1,0 +1,137 @@
+/* ===========================
+   Dashboard Premium
+=========================== */
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+padding:20px;
+
+}
+
+.card{
+
+background:linear-gradient(135deg,#1185ff,#42b7ff);
+
+color:white;
+
+padding:25px;
+
+border-radius:22px;
+
+box-shadow:0 15px 35px rgba(17,133,255,.25);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card h3{
+
+font-size:15px;
+
+opacity:.9;
+
+margin-bottom:10px;
+
+}
+
+.card h1{
+
+font-size:32px;
+
+font-weight:700;
+
+}
+
+.table-area{
+
+padding:20px;
+
+}
+
+.table-area table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.table-area th{
+
+background:#1185ff;
+
+color:white;
+
+padding:15px;
+
+}
+
+.table-area td{
+
+padding:14px;
+
+border-bottom:1px solid #eee;
+
+text-align:center;
+
+}
+
+.table-area button{
+
+padding:8px 14px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin:2px;
+
+}
+
+.table-area button:first-child{
+
+background:#1185ff;
+
+color:white;
+
+}
+
+.table-area button:last-child{
+
+background:#ff4d4f;
+
+color:white;
+
+}
+
+select{
+
+padding:8px;
+
+border-radius:8px;
+
+border:1px solid #ddd;
+
+}
