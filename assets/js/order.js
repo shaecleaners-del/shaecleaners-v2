@@ -93,129 +93,104 @@ hitungTotal();
    WHATSAPP
 ============================= */
 
-btnWA.addEventListener("click",()=>{
+btnWA.addEventListener("click", () => {
 
-    if(
-        nama.value==="" ||
-        hp.value==="" ||
-        alamat.value==="" ||
-        layanan.value===""
-    ){
-
+    if (
+        nama.value === "" ||
+        hp.value === "" ||
+        alamat.value === "" ||
+        layanan.value === ""
+    ) {
         alert("Mohon lengkapi data terlebih dahulu.");
-
         return;
-
     }
 
-    const data=layanan.value.split("|");
+    const data = layanan.value.split("|");
 
-    const layananNama=data[0];
+    const layananNama = data[0];
+    const harga = parseInt(data[1]);
+    const jumlah = parseInt(qty.value) || 1;
+    const total = harga * jumlah;
 
-    const harga=parseInt(data[1]);
+    const orderData = {
 
-    const jumlah=parseInt(qty.value)||1;
+        invoice: invoiceText.innerText,
 
-    const total=harga*jumlah;
+        nama: nama.value,
 
-    const pesan=
+        hp: hp.value,
 
-`*PESANAN BARU - SHAE CLEANERS*
+        alamat: alamat.value,
 
-📄 Invoice
-${invoiceText.innerText}
+        layanan: layananNama,
 
-👤 Nama
-${nama.value}
+        qty: jumlah,
 
-📱 WhatsApp
-${hp.value}
+        harga: harga,
 
-📍 Alamat
-${alamat.value}
+        total: total,
 
-🧹 Layanan
-${layananNama}
+        tanggal: tanggal.value,
 
-📦 Jumlah
-${jumlah}
+        jam: jam.value,
 
-📅 Tanggal
-${tanggal.value}
+        status: "Menunggu"
 
-⏰ Jam
-${jam.value}
+    };
 
-💰 Harga
-${rupiah(harga)}
+    // Simpan order terakhir
+    localStorage.setItem(
+        "orderData",
+        JSON.stringify(orderData)
+    );
 
-💳 Total
-${rupiah(total)}
+    // Simpan riwayat order
+    let orders =
+        JSON.parse(localStorage.getItem("orders")) || [];
 
-Terima kasih. Mohon konfirmasi pesanan saya.`;
+    orders.push(orderData);
 
-    const nomorAdmin="6283813138221";
-let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    localStorage.setItem(
+        "orders",
+        JSON.stringify(orders)
+    );
 
-orders.push({
+    const nomorAdmin = "6283813138221";
 
-    invoice: invoiceText.innerText,
+    const pesan = `Halo Shae Cleaners.
 
-    nama: nama.value,
+Invoice : ${orderData.invoice}
 
-    hp: hp.value,
+Nama : ${orderData.nama}
 
-    alamat: alamat.value,
+WhatsApp : ${orderData.hp}
 
-    layanan: layananNama,
+Alamat : ${orderData.alamat}
 
-    qty: jumlah,
+Layanan : ${orderData.layanan}
 
-    harga: harga,
+Jumlah : ${orderData.qty}
 
-    total: total,
+Tanggal : ${orderData.tanggal}
 
-    tanggal: tanggal.value,
+Jam : ${orderData.jam}
 
-    jam: jam.value,
+Total : ${rupiah(orderData.total)}
 
-    status: "Menunggu"
+Terima kasih.`;
 
-});
-
-localStorage.setItem(
-    "orders",
-    JSON.stringify(orders)
-);
-
-// Buka halaman invoice
-window.location.href = "invoice.html";
     window.open(
         `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`,
         "_blank"
     );
 
+    setTimeout(() => {
+
+        window.location.href = "invoice.html";
+
+    }, 500);
 });
-import {
-
-collection,
-
-addDoc
-
-} from "firebase/firestore";
-
-import {
-
-db
-
-} from "./firebase.js";
-
-await addDoc(
-
-collection(db,"orders"),
-
 {
-
 invoice:invoice,
 
 nama:nama,
